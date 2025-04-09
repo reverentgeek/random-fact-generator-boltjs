@@ -1,0 +1,55 @@
+{
+  "display_information": {
+    "name": "Useless Fact Service"
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": true
+    },
+    "bot_user": {
+      "display_name": "Useless Fact Service",
+      "always_online": false
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["chat:write", "app_mentions:read", "workflow.steps:execute"]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "user_events": ["message.app_home"],
+      "bot_events": [
+        "app_mention",
+        "workflow_step_execute",
+        "function_executed"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": true,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false,
+    "hermes_app_type": "remote",
+    "function_runtime": "remote"
+  },
+  "functions": {
+    "useless_fact_step": {
+      "title": "Useless Fact Custom Step",
+      "description": "Runs useless fact step",
+      "input_parameters": {},
+      "output_parameters": {
+        "message": {
+          "type": "string",
+          "title": "Fact",
+          "description": "A random useless fact",
+          "is_required": true,
+          "name": "message"
+        }
+      }
+    }
+  }
+}

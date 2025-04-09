@@ -1,0 +1,24 @@
+{
+  "name": "bolt-useless-facts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --env-file=.env --watch app.js",
+    "lint": "npx @biomejs/biome lint --write"
+  },
+  "keywords": [],
+  "author": "David Neal <d.neal@salesforce.com> (https://reverentgeek.com/)",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0"
+  },
+  "dependencies": {
+    "@slack/bolt": "^4.2.1",
+    "axios": "^1.8.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}
